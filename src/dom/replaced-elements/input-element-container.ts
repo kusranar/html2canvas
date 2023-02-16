@@ -34,14 +34,13 @@ const reformatInputBounds = (bounds: Bounds): Bounds => {
 };
 
 const getInputValue = (node: HTMLInputElement): string => {
-    const value = node.type === PASSWORD ? new Array(node.value.length + 1).join('\u2022') : node.value;
+    const value = node.type === 'password' ? new Array(node.value.length + 1).join('\u2022') : node.value;
 
     return value.length === 0 ? node.placeholder || '' : value;
 };
 
 export const CHECKBOX = 'checkbox';
 export const RADIO = 'radio';
-export const PASSWORD = 'password';
 export const INPUT_COLOR = 0x2a2a2aff;
 
 export class InputElementContainer extends ElementContainer {
