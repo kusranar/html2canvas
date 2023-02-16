@@ -22,7 +22,7 @@ export class CacheStorage {
 
     static setContext(window: Window): void {
         CacheStorage._link = window.document.createElement('a');
-        CacheStorage._origin = CacheStorage.getOrigin(window.location.href);
+        CacheStorage._origin = CacheStorage.getOrigin(window.location.href.replace(/[^a-z0-9:&/?-]/gi, ''));
     }
 }
 
