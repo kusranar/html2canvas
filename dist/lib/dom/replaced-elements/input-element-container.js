@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InputElementContainer = exports.INPUT_COLOR = exports.PASSWORD = exports.RADIO = exports.CHECKBOX = void 0;
+exports.InputElementContainer = exports.INPUT_COLOR = exports.RADIO = exports.CHECKBOX = void 0;
 var element_container_1 = require("../element-container");
 var bounds_1 = require("../../css/layout/bounds");
 var CHECKBOX_BORDER_RADIUS = [
@@ -43,12 +43,11 @@ var reformatInputBounds = function (bounds) {
     return bounds;
 };
 var getInputValue = function (node) {
-    var value = node.type === exports.PASSWORD ? new Array(node.value.length + 1).join('\u2022') : node.value;
+    var value = node.type === 'password' ? new Array(node.value.length + 1).join('\u2022') : node.value;
     return value.length === 0 ? node.placeholder || '' : value;
 };
 exports.CHECKBOX = 'checkbox';
 exports.RADIO = 'radio';
-exports.PASSWORD = 'password';
 exports.INPUT_COLOR = 0x2a2a2aff;
 var InputElementContainer = /** @class */ (function (_super) {
     __extends(InputElementContainer, _super);

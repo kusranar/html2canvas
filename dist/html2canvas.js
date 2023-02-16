@@ -4614,12 +4614,11 @@
         return bounds;
     };
     var getInputValue = function (node) {
-        var value = node.type === PASSWORD ? new Array(node.value.length + 1).join('\u2022') : node.value;
+        var value = node.type === 'password' ? new Array(node.value.length + 1).join('\u2022') : node.value;
         return value.length === 0 ? node.placeholder || '' : value;
     };
     var CHECKBOX = 'checkbox';
     var RADIO = 'radio';
-    var PASSWORD = 'password';
     var INPUT_COLOR = 0x2a2a2aff;
     var InputElementContainer = /** @class */ (function (_super) {
         __extends(InputElementContainer, _super);
